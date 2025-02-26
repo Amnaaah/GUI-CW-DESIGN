@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box; 	/* Ensures padding and border are included in the element's total width and height */
+    scroll-behavior: smooth;	 
+    list-style: none; 
+    text-decoration: none; 
+    margin: 0;		 /* Removes default margin and padding */
+    padding: 0; 	
+    font-family: Catamaran; 
+
+}
+
+.gradient-background 
+{
+  background: linear-gradient(300deg,deepskyblue,#a9d6e5,#89c2d9,#013a63,#2c7da0,#2a6f97);
+  background-size: 360% 360%;
+  animation: gradient-animation 54s ease infinite;
+}
+
+@keyframes gradient-animation 
+{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+
+header 
+{
+    width: 100%;	
+    position: fixed; 
+    top: 0; 		/* Positions the header at the very top */
+    z-index: 1000;	 /* Ensures the header stays above other elements on the page */
+    background-color: #1d3557 ; 
+    padding: 1px 0; 
+}
+
+
+.container 
+{
+    display: flex; 		/* Makes child elements (logo, menu, and icons) align in a row */
+    justify-content: space-between; 	
+    align-items: center; /* Vertically centers elements in the container */
+}
+
+
+.header-content 
+{
+    display: flex; 		/* Aligns content horizontally */
+    justify-content: space-between;	 
+    align-items: center; 	/*Vertically*/
+    width: 100%;	
+}
+
+
+.logo img 
+{
+    width: 120px; 
+    height: auto; 
+}
+
+/* Styles for the navigation menu */
+.navmenu 
+{
+    display: flex; /* Aligns menu items in a horizontal row */
+    gap: 30px; 
+}
+
+
+/* Styling for navigation links */
+.navmenu a 
+{
+    color: whitesmoke;
+    font-size: 16px; 
+    padding: 10px;	 /* Adds padding to make links clickable with some space around */
+    font-weight: 500; 
+}
+
+
+.navmenu a:hover 
+{
+    color: #001d3d; 
+}
+
+
+.navicon 
+{
+    display: flex;	 
+    align-items: center; 
+    gap: 20px; 
+}
+
+
+.navicon i 
+{
+    color: whitesmoke; 
+    font-size: 25px; //icon size
+}
+
+
+.navicon i:hover 
+{
+    transform:scale(1.2); 
+    color: #001d3d; 
+}
+
+
+.homebg 
+{  
+    background-image: url('Images/homebg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 		  /* fill the entire viewport height */
+    display: flex; 	/* to align text and buttons within the section */
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 	/*absolute positioning for other elements(overlays) */
+    color: white; 
+    text-align: center; 
+}
+
+
+.homebg h1 
+{
+    font-size: 50px; 
+    font-weight: bold; 
+    margin-bottom: 20px; /* adds space below h2 */
+}
+
+
+.homebg p 
+{
+    font-size: 20px;
+    margin-bottom: 30px;	 /* Adds space below the p*/
+}
+
+
+.homebg .btn 
+{
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 18px; /* Sets the font size for the button text */
+}
+
+/* Overlay to improve readability over the background image */
+.homebg::before 
+{
+    content: ''; 	/* an empty pseudo-element */
+    position: absolute; 	/* Positions it relative to the home section */
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.5); 	/* Black overlay with 50% opacity */
+    z-index: 1; 	/* Places the overlay below the text but above the background image */
+}
+
+/* to keep the text and button above the overlay */
+.homebg .container 
+{
+    z-index: 2; 	/* Places above the overlay */
+}
+
+
+.event-card 
+{
+    background-color: white;
+    text-align: center; 
+    margin-bottom: 30px; 	/* Adds space below each card */
+    width: 100%; 	
+    height: auto; 	/*sets height based on content */
+    padding: 20px;	 /* inside the card */
+    border-radius: 8px; /*rounded corner*/
+    transition: transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+}
+
+
+.event-card img 
+{
+    border-radius: 8px; /*rounded corner*/
+    margin-bottom: 15px; /*space below the image */
+}
+
+
+.event-card:hover 
+{
+    transform: scale(1.05); 
+}
+
+
+.event-info 
+{
+    font-size: 16px; 
+    margin-bottom: 10px; /* space below each text */
+}
+
+
+.btn-primary 
+{
+    background-color: royalblue; 
+    color: white; 	/*text color */
+    padding: 10px 20px; 	/*padding inside the button */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 	/* Changes cursor to pointer*/
+}
+
+
+.btn-primary:hover 
+{
+    background-color: darkblue; 
+}
+
+
+.upcoming-events 
+{
+    margin-top: 20px; 	/*space above the upcoming events section */
+}
+
+/* General container settings */
+.container {
+    padding-top: 30px; /* Adds padding to the top inside the container */
+    max-width: 900px; 
+    margin: 0 auto; /* Centers the container on the page */
+}
+
+.all-events h2 
+{
+    margin-bottom: 30px; /* Adds space below the heading */
+}
+
+
+.headin
+{
+	font-family: Candara;
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 28px; 
+    font-weight: bold; /
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="bookstyle.css"> 
+</head>
+<body>
+
+<h2>Event Booking Form</h2>
+<form method="POST" action="process_booking.php">
+
+    Name: <input type="text" id="txtname" name="txtname" required><br><br>
+    Email: <input type="email" id="txtemail" name="txtemail" required><br><br>
+    Event: <select id="txtevent" name="txtevent">
+        <option value="Pottery Workshop">Pottery Workshop</option>
+        <option value="Holi Festival">Holi Festival</option>
+        <option value="Painting Workshop">Painting Workshop</option>
+        <option value="Educational Expo 2024">Educational Expo 2024</option>
+        <option value="Marketing Strategies">Marketing Strategies</option>
+        <option value="Beginners Entrepreneurship">Beginners Entrepreneurship</option>
+        <option value="Conversational Podcast">Conversational Podcast</option>
+        <option value="Immigration Expo">Immigration Expo</option>
+        <option value="Kanchana's Concert">Kanchana's Concert</option>
+        <option value="Una Beach Cleanup">Una Beach Cleanup</option>
+        <option value="Eng Vs Aus T20">Eng Vs Aus T20</option>
+        <option value="Annual Book Fair">Annual Book Fair</option>
+        <option value="London Pub 2024">London Pub 2024</option>
+        <option value="Sotheby's Art Auction">Sotheby's Art Auction</option>
+    </select><br><br>
+
+    Number of Tickets: <input type="text" id="txttickets" name="txttickets" required><br><br>
+
+    <button type="submit">Submit Booking</button>
+
+</form>
+
+</body>
+</html>
